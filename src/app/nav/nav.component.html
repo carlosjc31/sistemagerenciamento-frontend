@@ -1,1 +1,10 @@
-<p>nav works!</p>
+<nav>
+    <ul>
+        <li *ngIf = "!isAuthenticated"><a routerLink = "/login">Login</a></li>
+        <li *ngIf = "isAuthenticated"><a routerLink = "/profile">Perfil</a></li>
+        <li *ngIf = "isAdmin"><a routerLink = "/users">Gerenciamento de Usuários</a></li>
+        <li *ngIf = "!isAuthenticated"><a routerLink = "/login">Login</a></li>
+        <li *ngIf = "isAuthenticated"><a routerLink = "" (click)="logout()">Logout</a></li>
+    </ul>
+</nav>
+

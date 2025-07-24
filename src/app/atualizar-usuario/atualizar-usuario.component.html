@@ -1,1 +1,20 @@
-<p>atualizar-usuario works!</p>
+<div class="container">
+    <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
+    <h2>Atualizar Usuario</h2>
+    <form (ngSubmit)="atualizarusuario()">
+        <div class="form-group">
+                <label for="">Nome: </label>
+                <input type="text" name="nome" [(ngModel)]="userData.nome">
+        </div>
+        <div class="form-group">
+                <label for="">Email: </label>
+                <input type="text" name="emaik" [(ngModel)]="userData.email">
+        </div>
+        <div class="form-group">
+                <label for="">Função: </label>
+                <input type="text" name="funcao" [(ngModel)]="userData.funcao">
+        </div>
+
+        <button type="submit">Atualizar</button>
+    </form>
+</div>

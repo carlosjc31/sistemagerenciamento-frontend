@@ -1,0 +1,43 @@
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(67, 77, 76, 0.1);
+    }
+
+    .container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    }
+
+    .container p {
+    margin-bottom: 10px;
+    }
+
+    .container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #2e8cf0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .container button:hover {
+    background-color: #84b8f0;
+    }
+
+    .error-message {
+    color: #ec2337;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+    }

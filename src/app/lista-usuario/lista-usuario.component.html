@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Gerenciamento de Usuários</h2>
+    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    <button routerLink="/register" class="reg-button">Add Usuários</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Função</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios" key="usuario.id">
+                <td>{{ usuario.id }}</td>
+                <td>{{ usuario.name }}</td>
+                <td>{{ usuario.email }}</td>
+                <td>{{ usuario.funcao }}</td>
+                <td>
+                    <button class="delete-button" (click)="deleteUser(usuario.id)">Deletar</button>
+                    <button class="update-button" (click)="navigateToUpdate(usuario.id)">Atualizar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
